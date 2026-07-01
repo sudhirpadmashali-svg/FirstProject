@@ -1,0 +1,57 @@
+name: Release Notes Automation
+
+# Push a tag like "v1.2.0" to trigger this workflow. It diffs the commits
+# since the previous tag, generates categorized Markdown release notes,
+# and publishes a GitHub Release with those notes attached.
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Determine previous tag
+        id: tags
+        run: |
+          CURRENT_TAG="${GITHUB_REF_NAME}"
+          PREV_TAG=$(git describe --tags --abbrev=0 "${CURRENT_TAG}^" 2>/dev/null || echo "")
+          echo "current=$CURRENT_TAG" >> "$GITHUB_OUTPUT"
+          echo "previous=$PREV_TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Generate release notes
+        run: |
+          if [ -n "${{ steps.tags.outputs.previous }}" ]; then
+            python generate_release_notes.py \
+              --version "${{ steps.tags.outputs.current }}" \
+              --since "${{ steps.tags.outputs.previous }}" \
+              --output RELEASE_NOTES.md
+          else
+            python generate_release_notes.py \
+              --version "${{ steps.tags.outputs.current }}" \
+              --output RELEASE_NOTES.md
+          fi
+          cat RELEASE_NOTES.md
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.tags.outputs.current }}" \
+            --title "${{ steps.tags.outputs.current }}" \
+            --notes-file RELEASE_NOTES.md
