@@ -1,0 +1,40 @@
+{
+  "releaseVersion": "26.6.1.0",
+  "releaseMonthYear": "June 2026",
+  "window": "2026-05-01 to 2026-05-31",
+  "contentTypeLabel": "International VAT",
+  "generated": "2026-06-30",
+  "newJurisdictions": null,
+  "resources": [
+    { "label": "EU VAT scope & Out-of-Scope treatment reference", "url": "#" },
+    { "label": "OSS/IOSS scheme help article", "url": "#" }
+  ],
+  "tree": [
+    {
+      "code": "EU",
+      "name": "European Union",
+      "level": "Economic Bloc",
+      "effectiveDate": "2026-05-21",
+      "taxTypes": [
+        {
+          "name": "Value Added Tax (VAT)",
+          "changes": [
+            {
+              "title": "Domestic VAT Out-of-Scope Expansion",
+              "category": "taxability",
+              "citations": ["EU Commission Directive 2026/X42"],
+              "effectiveFrom": "2026-05-21",
+              "taxability": {
+                "updations": [
+                  "Domestic VAT Out-of-Scope provision expanded to include service and digital transaction types (previously limited primarily to product transactions)."
+                ]
+              },
+              "summary": "The Domestic VAT Out-of-Scope provision in the European Union was expanded effective May 21, 2026.",
+              "impact": "Out-of-Scope treatment has been expanded to include service and digital transaction types. Prior to this change, treatment was primarily limited to product transactions."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
