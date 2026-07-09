@@ -6,6 +6,7 @@ const { buildDocument } = require("./lib/buildDocument");
 const CONFIGS = {
   sut: require("./config/sut.config"),
   vat: require("./config/vat.config"),
+  cb: require("./config/cb.config"),
 };
 
 function parseArgs(argv) {
@@ -22,7 +23,7 @@ function main() {
   const { type, input, output } = args;
 
   if (!type || !CONFIGS[type]) {
-    console.error(`Usage: node generate.js --type <sut|vat> --input <data.json> --output <out.html>`);
+    console.error(`Usage: node generate.js --type <sut|vat|cb> --input <data.json> --output <out.html>`);
     process.exit(1);
   }
   if (!input || !output) {

@@ -1,0 +1,50 @@
+{
+  "releaseVersion": "26.6.1.0",
+  "releaseMonthYear": "June 2026",
+  "window": "2026-05-01 to 2026-05-31",
+  "contentSyncDate": "2026-05-28",
+  "generated": "2026-06-30",
+  "newContent": null,
+  "systems": [
+    { "code": "HTS A", "name": "United States", "region": "North America", "effectiveDate": "12 Jun 2026" },
+    { "code": "HTS EU", "name": "European Union", "region": "Europe", "effectiveDate": "12 Jun 2026" }
+  ],
+  "deMinimis": [
+    { "jurisdiction": "United Kingdom", "newThreshold": "£135", "priorThreshold": "£0" },
+    { "jurisdiction": "Norway", "newThreshold": "NOK 3,000", "priorThreshold": "NOK 350" },
+    { "jurisdiction": "Brazil", "detail": "de minimis exemption removed for consumer imports" }
+  ],
+  "hsTaxonomy": [
+    {
+      "systemCode": "HTS A",
+      "region": "United States",
+      "additions": ["07 (Edible vegetables)", "08 (Edible fruit and nuts)"],
+      "deletions": []
+    },
+    {
+      "systemCode": "HTS EU",
+      "region": "European Union",
+      "additions": ["85 (Electrical machinery and equipment)"],
+      "deletions": ["99 (Special classification provisions)"]
+    }
+  ],
+  "customsValuation": "Transaction value remains the primary method. The computed-value fallback for related-party transactions was clarified to align with WTO Customs Valuation Agreement Article 6.",
+  "crossBorderContent": [
+    {
+      "systemCode": "HTS A",
+      "region": "United States",
+      "mfnChanges": ["Chapters 07, 08"],
+      "preferentialChanges": ["USMCA partners (Canada, Mexico) — chapters 07, 08 coverage refreshed"]
+    },
+    {
+      "systemCode": "HTS EU",
+      "region": "European Union",
+      "mfnChanges": ["Chapter 85"],
+      "preferentialChanges": ["EU FTA partners (condensed) — chapter 85 preferential rates updated"]
+    }
+  ],
+  "resources": [
+    { "label": "Cross-Border content coverage reference", "url": "#" },
+    { "label": "HS taxonomy & de minimis help article", "url": "#" }
+  ]
+}

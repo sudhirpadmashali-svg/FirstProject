@@ -140,5 +140,9 @@ module.exports = {
   buildTaxCodesSection,
   buildNewJurisdictionsSection,
   buildResourcesSection,
+  // shared HTML primitives, reused by the Cross-Border section builders
+  sectionWrap,
+  overviewLine,
   whatChangedLine,
+  noChanges,
 };

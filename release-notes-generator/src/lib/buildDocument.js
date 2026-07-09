@@ -8,6 +8,7 @@ const {
   buildNewJurisdictionsSection,
   buildResourcesSection,
 } = require("./sections");
+const { buildCrossBorderSections } = require("./sectionsCrossBorder");
 
 const CSS = fs.readFileSync(path.join(__dirname, "..", "styles.css"), "utf8");
 
@@ -19,18 +20,32 @@ function metaRow(config, data) {
 }
 
 /**
- * Build the full release-note HTML document for a given content type.
- * @param {object} config  One of config/sut.config.js or config/vat.config.js
- * @param {object} data    See data/sut-sample.json / data/vat-sample.json for shape
+ * Ordered body sections for the tree-based content types (SUT / VAT), whose
+ * changes live inside a nested jurisdiction tree (data.tree).
  */
-function buildDocument(config, data) {
-  const sections = [
+function buildTreeSections(config, data) {
+  return [
     buildJurisdictionsTable(config, data.tree),
     ...config.categorySections.map((sc) => buildCategorySection(sc, data.tree)),
     buildTaxCodesSection(config, data.tree),
     buildNewJurisdictionsSection(config, data),
     buildResourcesSection(config, data),
-  ].join("\n\n");
+  ];
+}
+
+/**
+ * Build the full release-note HTML document for a given content type.
+ * @param {object} config  One of config/sut.config.js, vat.config.js, cb.config.js
+ * @param {object} data    See data/*-sample.json for the shape each model expects
+ */
+function buildDocument(config, data) {
+  // Two document models: the SUT/VAT "tree" model (nested jurisdictions), and
+  // the Cross-Border "systems" model (flat, system-oriented content).
+  const sections = (
+    config.documentModel === "systems"
+      ? buildCrossBorderSections(config, data, buildResourcesSection)
+      : buildTreeSections(config, data)
+  ).join("\n\n");
 
   return `<!DOCTYPE html>
 <html lang="en">

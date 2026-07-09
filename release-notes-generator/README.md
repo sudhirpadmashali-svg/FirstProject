@@ -1,11 +1,12 @@
 # Release Notes HTML Generator
 
-Generates Knowledge Center–ready HTML release notes for the two custom content
-types — **US Indirect Taxes (SUT)** and **International VAT** — from structured
-JSON content-diff data, following the section structure defined in:
+Generates Knowledge Center–ready HTML release notes for the three custom content
+types — **US Indirect Taxes (SUT)**, **International VAT**, and **Cross-Border** —
+from structured JSON content-diff data, following the section structure defined in:
 
 - `SUT_ReleaseNote_Template_forAutomation.docx`
 - `VATInternational_ReleaseNote_Template_forAutomation.docx`
+- `CrossBorder_ReleaseNote_Template_forAutomation.docx`
 
 and matching the visual design of the production sample outputs:
 
@@ -23,7 +24,8 @@ templating engine to the stack.
 ```
 npm run generate:sut   # -> output/sut.html
 npm run generate:vat   # -> output/vat.html
-npm run generate:all   # both
+npm run generate:cb    # -> output/cb.html  (Cross-Border)
+npm run generate:all   # all three
 ```
 
 Or directly:
@@ -31,36 +33,59 @@ Or directly:
 ```
 node src/generate.js --type sut --input data/sut-sample.json --output output/sut.html
 node src/generate.js --type vat --input data/vat-sample.json --output output/vat.html
+node src/generate.js --type cb  --input data/cb-sample.json  --output output/cb.html
 ```
 
 ## How a document is assembled
 
 `src/lib/buildDocument.js` lays out the page in the exact order the docx
-templates specify:
+templates specify. All three content types share the same document shell
+(title / release date / intro / meta row / `Release Note [Version]` heading /
+footer); they differ in the **document model** used for the body:
 
-1. Title, release date, intro paragraph (from the content-type config)
-2. Meta row (Window/Generated for SUT; Release Window/Content Type/Generated for VAT)
-3. `Release Note [Version] ([Month Year])` heading
-4. **Jurisdictions Updated** — table, built by flattening every dated node in the tree
-5. One section per template-defined change category (e.g. *Changes to Tax
-   Rates*, *Changes to Economic Nexus Thresholds*, *Changes to Taxability
-   Rules* for SUT; the VAT equivalents for VAT) — each falls back to the
-   template's own "No changes..." text when there's nothing to show
-6. **Updated Tax Codes** — aggregated from every change's `taxCodes` block, regardless of category
-7. **New Jurisdictions or Tax Types/VAT Regimes Added**
-8. **Supporting Resources**
-9. Parent topic + standard disclaimer footer
+- **`tree`** (SUT, VAT) — changes live inside a nested jurisdiction tree
+  (`data.tree`); body built by `src/lib/sections.js`:
+  1. **Jurisdictions Updated** — table, built by flattening every dated node in the tree
+  2. One section per template-defined change category (e.g. *Changes to Tax
+     Rates*, *Changes to Economic Nexus Thresholds*, *Changes to Taxability
+     Rules* for SUT; the VAT equivalents for VAT)
+  3. **Updated Tax Codes** — aggregated from every change's `taxCodes` block, regardless of category
+  4. **New Jurisdictions or Tax Types/VAT Regimes Added**
+  5. **Supporting Resources**
 
-The `[INTERNAL] Document Metadata Block` at the top of both `.docx` files is
+- **`systems`** (Cross-Border) — content is organized around content *systems*
+  (HTS taxonomies / regions), not a jurisdiction tree; body built by
+  `src/lib/sectionsCrossBorder.js`:
+  1. **Systems Updated** — table of {System Code, System Name / Region, Effective Date}
+  2. **Changes to De Minimis Rules** — bullet list, one line per jurisdiction
+  3. **Changes to HS Taxonomy** — one card per system with added / deleted HS chapters
+  4. **Changes to Customs Valuation Approaches** — free text
+  5. **Updated Cross-Border Content** — one card per system with MFN / preferential changes
+  6. **New Cross-Border Content Added**
+  7. **Supporting Resources**
+
+Every section falls back to the template's own "No changes..." text when there's
+nothing to show. `buildDocument` branches on `config.documentModel` (`"systems"`
+for Cross-Border, tree otherwise), then wraps the body in the shared shell.
+
+The `[INTERNAL] Document Metadata Block` at the top of all three `.docx` files is
 intentionally **not** reproduced here — it's marked "do not publish" in the
 templates, so it's automation/workflow metadata only (approval status, DITA
 map ID, etc.), not part of the published article.
 
 ## Content-type configuration
 
-`src/config/sut.config.js` and `src/config/vat.config.js` hold everything
-that differs between the two content types: heading text, meta field labels,
-and — importantly — `hierarchyStyle`:
+`src/config/*.config.js` hold everything that differs between content types:
+heading text, meta field labels, and (for the tree model) `hierarchyStyle`.
+
+The **Cross-Border** config (`src/config/cb.config.js`) sets
+`documentModel: "systems"` and lists its `categorySections` with a `render`
+mode each — `deMinimisList`, `systemAddDelete`, `freeText`, or
+`systemMfnPreferential` — plus the `key` naming the top-level data field that
+section reads. No jurisdiction tree is involved; see the data schema below.
+
+For the tree model, `sut.config.js` and `vat.config.js` differ mainly in
+`hierarchyStyle`:
 
 - `"tree"` (SUT): nested `Country > State > County > City` guide-line layout
 - `"card"` (VAT): flat, single bordered card per jurisdiction
@@ -138,6 +163,38 @@ renderer which docx-template section that change belongs to.
 A `taxCodes` block on any change is picked up automatically for the
 **Updated Tax Codes** section regardless of that change's `category`.
 
+## Cross-Border data schema (`data/cb-sample.json`)
+
+Cross-Border uses the `systems` model instead of a `tree`: document-level
+metadata plus one flat array per template section. Each `key` matches a
+`categorySections` entry in `cb.config.js`.
+
+```jsonc
+{
+  "releaseVersion": "26.6.1.0",
+  "releaseMonthYear": "June 2026",
+  "window": "2026-05-01 to 2026-05-31",
+  "contentSyncDate": "2026-05-28",
+  "generated": "2026-06-30",
+  "newContent": null,              // string, or null to use the "No changes" fallback
+  "systems": [                     // -> Systems Updated table (only rows with effectiveDate shown)
+    { "code": "HTS A", "name": "United States", "region": "North America", "effectiveDate": "12 Jun 2026" }
+  ],
+  "deMinimis": [                   // -> Changes to De Minimis Rules
+    { "jurisdiction": "United Kingdom", "newThreshold": "£135", "priorThreshold": "£0" },
+    { "jurisdiction": "Brazil", "detail": "de minimis exemption removed" }  // free-form line
+  ],
+  "hsTaxonomy": [                  // -> Changes to HS Taxonomy (one card per system)
+    { "systemCode": "HTS A", "region": "United States", "additions": ["07 (Edible vegetables)"], "deletions": [] }
+  ],
+  "customsValuation": "…",         // -> Changes to Customs Valuation Approaches (free text, or null)
+  "crossBorderContent": [          // -> Updated Cross-Border Content (one card per system)
+    { "systemCode": "HTS A", "region": "United States", "mfnChanges": ["Chapters 07, 08"], "preferentialChanges": ["USMCA partners …"] }
+  ],
+  "resources": [{ "label": "…", "url": "…" }]
+}
+```
+
 ## File map
 
 ```
@@ -147,17 +204,20 @@ src/
   config/
     sut.config.js           SUT section headings, prompt text, hierarchyStyle
     vat.config.js           VAT section headings, prompt text, hierarchyStyle
+    cb.config.js            Cross-Border headings, prompt text, systems model + render modes
   lib/
     format.js                HTML-escaping + small field formatters
     renderChangeCard.js       renders one Change record (title/citation/fields/action-required/tax-code footer)
     renderTree.js             recursive Country>State>County>City renderer
     renderFlatCards.js        flat single-card-per-jurisdiction renderer
     flatten.js                tree-walking helpers (jurisdictions table, category grouping, tax-code aggregation)
-    sections.js               builds each named section from config + tree
-    buildDocument.js          assembles the full HTML page
+    sections.js               builds each tree-model section from config + tree
+    sectionsCrossBorder.js    builds each Cross-Border (systems-model) section from config + data
+    buildDocument.js          assembles the full HTML page (branches on documentModel)
 data/
   sut-sample.json           transcribed from US_Indirect_Taxes_Release_Notes.pdf
   vat-sample.json           transcribed from International_VAT_Release_Notes.pdf
+  cb-sample.json            Cross-Border sample (systems model), per the CrossBorder docx template
 output/                     generated HTML lands here (gitignored)
 ```
 

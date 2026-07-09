@@ -1,13 +1,14 @@
 {
   "name": "release-notes-html-generator",
   "version": "1.0.0",
-  "description": "Generates Knowledge Center HTML release notes from the SUT / VAT International Word templates + structured content-diff data (per Release_Notes_XML_Schema).",
+  "description": "Generates Knowledge Center HTML release notes from the SUT / VAT International / Cross-Border Word templates + structured content-diff data (per Release_Notes_XML_Schema).",
   "main": "src/generate.js",
   "type": "commonjs",
   "scripts": {
     "generate:sut": "node src/generate.js --type sut --input data/sut-sample.json --output output/sut.html",
     "generate:vat": "node src/generate.js --type vat --input data/vat-sample.json --output output/vat.html",
-    "generate:all": "npm run generate:sut && npm run generate:vat"
+    "generate:cb": "node src/generate.js --type cb --input data/cb-sample.json --output output/cb.html",
+    "generate:all": "npm run generate:sut && npm run generate:vat && npm run generate:cb"
   },
   "license": "UNLICENSED",
   "private": true
