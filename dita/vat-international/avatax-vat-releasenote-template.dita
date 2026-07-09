@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<!--
+  AvaTax VAT International Release Note - DITA TEMPLATE
+  Structural snippet mirroring VATInternational_ReleaseNote_Template_forAutomation.docx.
+  Placeholder provenance:
+    [SYSTEM]        = populated by the automation service / Jira metadata
+    [LLM-GENERATED] = drafted by the language model from source content
+    [AUTHOR]        = supplied/curated by a human author when applicable
+-->
+<reference id="avatax_vat_rn_template">
+  <title>Avalara AvaTax VAT International Release Notes</title>
+  <shortdesc>This is a summary of system updates. It includes VAT registration threshold
+    changes, VAT rate changes, taxability and exemption rule changes, tax code changes, and
+    jurisdiction content updates.</shortdesc>
+  <prolog>
+    <!-- [INTERNAL] Document Metadata Block - automation anchor, do not publish -->
+    <metadata>
+      <othermeta name="template-version" content="2.0"/>
+      <othermeta name="template-type" content="Custom - VAT International"/>
+      <othermeta name="product-area" content="[Jira Product Area value]"/><!-- [SYSTEM] -->
+      <othermeta name="fix-version" content="[Jira Fix Version value]"/><!-- [SYSTEM] -->
+      <othermeta name="content-sync-date" content="[latest content synchronization date]"/><!-- [SYSTEM] -->
+      <othermeta name="content-library" content="[from Documentation Mapping Repository]"/><!-- [SYSTEM] -->
+      <othermeta name="documentation-branch" content="[e.g., release-26.6]"/><!-- [SYSTEM] -->
+      <othermeta name="dita-map-id" content="AVATAX_VAT_RN_MAP"/><!-- [SYSTEM] -->
+      <othermeta name="release-notes-required" content="[Yes | No]"/><!-- [SYSTEM] -->
+      <othermeta name="approval-status" content="[Draft | In Review | Approved | Published]"/><!-- [SYSTEM] -->
+      <othermeta name="publication-status" content="[Unpublished | Scheduled | Published]"/><!-- [SYSTEM] -->
+      <othermeta name="validation-result" content="[Pass | Fail | Pending]"/><!-- [SYSTEM] -->
+      <othermeta name="generation-timestamp" content="[auto-populated by automation service]"/><!-- [SYSTEM] -->
+      <prodinfo>
+        <prodname>[e.g., AvaTax VAT International]</prodname><!-- [SYSTEM] -->
+        <vrmlist>
+          <vrm version="[e.g., 26.6.1.0]"/><!-- [SYSTEM] Release Version -->
+        </vrmlist>
+      </prodinfo>
+    </metadata>
+    <critdates>
+      <created date="[YYYY-MM-DD]"/><!-- [SYSTEM] Release Date -->
+      <revised modified="[auto-populated by automation service]"/><!-- [SYSTEM] Last Updated -->
+    </critdates>
+  </prolog>
+  <refbody>
+    <section id="release" outputclass="release-heading">
+      <title>Release Note [Version] ([Month Year])</title>
+    </section>
+
+    <section id="jurisdictions-updated">
+      <title>Jurisdictions Updated</title>
+      <p><b>Overview:</b> [Summarize which jurisdictions' VAT content was refreshed in this
+        release. Effective dates reflect the latest available content synchronization.
+        — LLM-GENERATED]</p>
+      <table frame="all" id="juris-table">
+        <title>Jurisdictions and effective dates</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colwidth="1*"/>
+          <colspec colname="c2" colwidth="2*"/>
+          <colspec colname="c3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Jurisdiction Code</entry>
+              <entry>Jurisdiction Name / Level</entry>
+              <entry>Effective Date</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>[e.g., DE]</entry>
+              <entry>[e.g., Germany / Country]</entry>
+              <entry>[DD Mon YYYY]</entry>
+            </row>
+            <row>
+              <entry>[Jurisdiction code]</entry>
+              <entry>[Jurisdiction name / level]</entry>
+              <entry>[DD Mon YYYY]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+
+    <section id="registration-thresholds">
+      <title>Changes to VAT Registration Thresholds</title>
+      <p><b>What changed:</b> [List each jurisdiction whose VAT registration threshold changed,
+        with the new value and, where relevant, the prior value. If none, write:
+        "No changes to VAT registration thresholds in this release." — LLM-GENERATED]</p>
+      <ul>
+        <li>[Jurisdiction] — updated to [new threshold] (from [prior threshold], if applicable)</li>
+        <li>[Jurisdiction] — [change detail]</li>
+      </ul>
+    </section>
+
+    <section id="vat-rates">
+      <title>Changes to VAT Rates</title>
+      <p><b>What changed:</b> [Summarize standard, reduced, and zero-rate additions, updates, and
+        deletions by jurisdiction. List each affected jurisdiction as a sub-heading with its rate
+        changes. If none, write: "No VAT rate changes in this release." — LLM-GENERATED]</p>
+      <!-- Repeat the block below for each affected jurisdiction -->
+      <p outputclass="jurisdiction-heading"><b>[Jurisdiction Code] ([Jurisdiction Name])</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Tax Type</dt>
+          <dd>[e.g., VAT, GST]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Change Title</dt>
+          <dd>[High-level headline of the rate change, e.g., "Standard VAT Rate Increase"]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Citations</dt>
+          <dd>[Legal or legislative reference(s), e.g., directive or decree number — AUTHOR if applicable]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Effective From / To</dt>
+          <dd>[DD Mon YYYY] / [DD Mon YYYY, if applicable]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Additions</dt>
+          <dd>[New rates introduced, or "none"]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Updates</dt>
+          <dd>[Rates changed from prior value, or "none"]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Deletions</dt>
+          <dd>[Rates removed or expired, or "none"]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Summary</dt>
+          <dd>[Concise explanation of what was modified. — LLM-GENERATED]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Impact</dt>
+          <dd>[Narrative describing how the change affects customer tax calculations. — LLM-GENERATED]</dd>
+        </dlentry>
+      </dl>
+      <note type="attention" outputclass="action-required">
+        <b>Action Required:</b> [Explicit instructions for customer system or process changes,
+        if any — AUTHOR if applicable]
+      </note>
+    </section>
+
+    <section id="taxability-exemption-rules">
+      <title>Changes to Taxability and Exemption Rules</title>
+      <p><b>What changed:</b> [Describe any changes to goods/services taxability or exemption
+        rules or logic. If none, write: "No changes." — LLM-GENERATED]</p>
+      <p outputclass="jurisdiction-heading"><b>[Jurisdiction Code] ([Jurisdiction Name])</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Tax Type</dt>
+          <dd>[e.g., VAT]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Updates</dt>
+          <dd>[Modified rule logic, or "none"]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Impact</dt>
+          <dd>[Narrative describing how the change affects customer tax outcomes. — LLM-GENERATED]</dd>
+        </dlentry>
+      </dl>
+    </section>
+
+    <section id="tax-codes">
+      <title>Updated Tax Codes</title>
+      <p><b>Overview:</b> [Summarize tax code additions and deletions. Group by jurisdiction.
+        — LLM-GENERATED]</p>
+      <p outputclass="jurisdiction-heading"><b>[Jurisdiction Code] ([Jurisdiction Name])</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Additions</dt>
+          <dd>[Tax codes added, or "none"]</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Deletions</dt>
+          <dd>[Tax codes removed, or "none"]</dd>
+        </dlentry>
+      </dl>
+    </section>
+
+    <section id="new-jurisdictions">
+      <title>New Jurisdictions or VAT Regimes Added</title>
+      <p><b>What was added:</b> [Describe any newly added jurisdictions, VAT regimes (e.g.,
+        OSS/IOSS), or content sets. If none, write: "No changes." — LLM-GENERATED]</p>
+    </section>
+
+    <section id="supporting-resources">
+      <title>Supporting Resources</title>
+      <p><b>Resources:</b> [Link to help articles, content coverage references, or supporting
+        assets. — AUTHOR if applicable]</p>
+      <ul>
+        <li><xref href="[url]" format="html" scope="external">[Resource title]</xref></li>
+      </ul>
+    </section>
+  </refbody>
+  <related-links>
+    <link href="avatax-vat-releasenotes.dita">
+      <linktext>AvaTax VAT International Release Notes</linktext>
+    </link>
+  </related-links>
+</reference>

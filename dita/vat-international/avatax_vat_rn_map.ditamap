@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!-- DITA Map ID: AVATAX_VAT_RN_MAP -->
+<map id="AVATAX_VAT_RN_MAP">
+  <title>Avalara AvaTax VAT International Release Notes</title>
+  <topicmeta>
+    <othermeta name="product" content="AvaTax VAT International"/>
+    <othermeta name="content-type" content="International VAT"/>
+  </topicmeta>
+  <topicref href="avatax-vat-releasenote-202606.dita" toc="yes"/>
+  <topicref href="avatax-vat-releasenote-template.dita" toc="no" processing-role="resource-only"/>
+</map>

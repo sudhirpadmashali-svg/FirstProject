@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!-- DITA Map ID: AVATAX_SUT_RN_MAP -->
+<map id="AVATAX_SUT_RN_MAP">
+  <title>Avalara AvaTax Sales &amp; Use Tax Release Notes</title>
+  <topicmeta>
+    <othermeta name="product" content="AvaTax"/>
+    <othermeta name="content-type" content="US Sales &amp; Use Tax"/>
+  </topicmeta>
+  <!-- Monthly release note topics are referenced newest-first. -->
+  <topicref href="avatax-sut-releasenote-202606.dita" toc="yes"/>
+  <!-- Reusable structural template (not published to end users). -->
+  <topicref href="avatax-sut-releasenote-template.dita" toc="no" processing-role="resource-only"/>
+</map>

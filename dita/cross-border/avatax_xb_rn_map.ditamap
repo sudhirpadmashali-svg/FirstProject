@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!-- DITA Map ID: AVATAX_XB_RN_MAP -->
+<map id="AVATAX_XB_RN_MAP">
+  <title>Avalara AvaTax Cross-Border Release Notes</title>
+  <topicmeta>
+    <othermeta name="product" content="AvaTax Cross-Border"/>
+    <othermeta name="content-type" content="Cross-Border"/>
+  </topicmeta>
+  <topicref href="avatax-xb-releasenote-202606.dita" toc="yes"/>
+  <topicref href="avatax-xb-releasenote-template.dita" toc="no" processing-role="resource-only"/>
+</map>

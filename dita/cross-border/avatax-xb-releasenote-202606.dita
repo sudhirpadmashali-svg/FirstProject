@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<!--
+  AvaTax Cross-Border Release Note - POPULATED SAMPLE
+  DITA rendering of CrossBorder_ReleaseNote_Preview.html (Release 26.6.1.0, June 2026).
+-->
+<reference id="avatax_xb_rn_202606">
+  <title>Avalara AvaTax Cross-Border Release Notes</title>
+  <shortdesc>This is a summary of system updates. It includes de minimis rules, HS taxonomy
+    changes, customs valuation approaches, and cross-border content updates.</shortdesc>
+  <prolog>
+    <metadata>
+      <othermeta name="template-version" content="2.0"/>
+      <othermeta name="template-type" content="Custom - Cross-Border"/>
+      <othermeta name="dita-map-id" content="AVATAX_XB_RN_MAP"/>
+      <othermeta name="approval-status" content="Published"/>
+      <othermeta name="publication-status" content="Published"/>
+      <othermeta name="validation-result" content="Pass"/>
+      <prodinfo>
+        <prodname>AvaTax Cross-Border</prodname>
+        <vrmlist>
+          <vrm version="26.6.1.0"/>
+        </vrmlist>
+      </prodinfo>
+    </metadata>
+    <critdates>
+      <created date="2026-06-30"/>
+    </critdates>
+  </prolog>
+  <refbody>
+    <section id="release" outputclass="release-heading">
+      <title>Release Note 26.6.1.0 (June 2026)</title>
+    </section>
+
+    <section id="systems-updated">
+      <title>Systems Updated</title>
+      <p>The following content systems were refreshed in this release. Effective dates reflect
+        the latest available content synchronization.</p>
+      <table frame="all" id="systems-table">
+        <title>Systems and effective dates</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colwidth="1*"/>
+          <colspec colname="c2" colwidth="2*"/>
+          <colspec colname="c3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>System Code</entry>
+              <entry>System Name / Region</entry>
+              <entry>Effective Date</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>HTS A</entry>
+              <entry>United States</entry>
+              <entry>01 Jul 2026</entry>
+            </row>
+            <row>
+              <entry>CN8</entry>
+              <entry>European Union</entry>
+              <entry>01 Jul 2026</entry>
+            </row>
+            <row>
+              <entry>HS UK</entry>
+              <entry>United Kingdom</entry>
+              <entry>15 Jun 2026</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+
+    <section id="de-minimis">
+      <title>Changes to De Minimis Rules</title>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Jurisdiction</dt>
+          <dd>United States</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Update</dt>
+          <dd>Section 321 de minimis exemption for low-value shipments removed for all countries
+            of origin.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Effective From</dt>
+          <dd>01 Jul 2026</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Impact</dt>
+          <dd>Shipments previously exempt under the $800 de minimis threshold are now subject to
+            duty and formal/informal entry requirements regardless of origin.</dd>
+        </dlentry>
+      </dl>
+      <p>No other de minimis rule changes in this release.</p>
+    </section>
+
+    <section id="hs-taxonomy">
+      <title>Changes to HS Taxonomy</title>
+      <p outputclass="system-heading"><b>CN8 (European Union)</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Additions</dt>
+          <dd>07 (Edible vegetables); 08 (Edible fruit and nuts)</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Deletions</dt>
+          <dd>none</dd>
+        </dlentry>
+      </dl>
+      <p outputclass="system-heading"><b>HS UK (United Kingdom)</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Additions</dt>
+          <dd>none</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Deletions</dt>
+          <dd>97 (Works of art, collectors' pieces and antiques) — chapter retired from the UK
+            tariff schedule</dd>
+        </dlentry>
+      </dl>
+    </section>
+
+    <section id="customs-valuation">
+      <title>Changes to Customs Valuation Approaches</title>
+      <p>No changes.</p>
+    </section>
+
+    <section id="updated-content">
+      <title>Updated Cross-Border Content</title>
+      <p outputclass="system-heading"><b>HTS A (United States)</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>MFN changes</dt>
+          <dd>Chapter 84 (Machinery and mechanical appliances) — updated general duty rates.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Preferential changes</dt>
+          <dd>USMCA preferential rates updated for Chapters 61–62 (apparel) covering Mexico and
+            Canada.</dd>
+        </dlentry>
+      </dl>
+      <p outputclass="system-heading"><b>CN8 (European Union)</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>MFN changes</dt>
+          <dd>none</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Preferential changes</dt>
+          <dd>EU–Vietnam FTA preferential coverage expanded to Chapter 85 (electrical machinery).
+            Full list of affected tariff lines has been condensed; see linked coverage reference
+            for details.</dd>
+        </dlentry>
+      </dl>
+    </section>
+
+    <section id="new-content">
+      <title>New Cross-Border Content Added</title>
+      <p>No changes.</p>
+    </section>
+
+    <section id="supporting-resources">
+      <title>Supporting Resources</title>
+      <ul>
+        <li><xref href="#" format="html" scope="external">HS taxonomy coverage reference</xref></li>
+        <li><xref href="#" format="html" scope="external">Section 321 de minimis change help
+          article</xref></li>
+      </ul>
+    </section>
+  </refbody>
+  <related-links>
+    <link href="avatax-xb-releasenotes.dita">
+      <linktext>AvaTax Cross-Border Release Notes</linktext>
+    </link>
+  </related-links>
+</reference>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<!--
+  AvaTax Sales & Use Tax (SUT) Release Note - POPULATED SAMPLE
+  DITA rendering of SUT_ReleaseNote_Preview_Sample2.html (Release 26.6.1.0, June 2026).
+-->
+<reference id="avatax_sut_rn_202606">
+  <title>Avalara AvaTax Sales &amp; Use Tax Release Notes</title>
+  <shortdesc>This is a summary of system updates. It includes economic nexus threshold
+    changes, tax rate changes, taxability rule changes, tax code changes, and jurisdiction
+    content updates.</shortdesc>
+  <prolog>
+    <metadata>
+      <othermeta name="template-version" content="2.0"/>
+      <othermeta name="template-type" content="Custom - SUT (US Sales &amp; Use Tax)"/>
+      <othermeta name="dita-map-id" content="AVATAX_SUT_RN_MAP"/>
+      <othermeta name="release-window" content="2026-06-01 to 2026-06-30"/>
+      <othermeta name="content-sync-date" content="2026-06-30"/>
+      <othermeta name="approval-status" content="Published"/>
+      <othermeta name="publication-status" content="Published"/>
+      <othermeta name="validation-result" content="Pass"/>
+      <prodinfo>
+        <prodname>AvaTax</prodname>
+        <vrmlist>
+          <vrm version="26.6.1.0"/>
+        </vrmlist>
+      </prodinfo>
+    </metadata>
+    <critdates>
+      <created date="2026-06-30"/>
+    </critdates>
+  </prolog>
+  <refbody>
+    <section id="release" outputclass="release-heading">
+      <title>Release Note 26.6.1.0 (June 2026)</title>
+    </section>
+
+    <section id="jurisdictions-updated">
+      <title>Jurisdictions Updated</title>
+      <p><b>Overview:</b> The following jurisdictions' tax content was refreshed in this
+        release. Effective dates reflect the latest available content synchronization.</p>
+      <table frame="all" id="juris-table">
+        <title>Jurisdictions and effective dates</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colwidth="1*"/>
+          <colspec colname="c2" colwidth="2*"/>
+          <colspec colname="c3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Jurisdiction Code</entry>
+              <entry>Jurisdiction Name / Level</entry>
+              <entry>Effective Date</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>US-MN-HENNEPIN-MPLS</entry>
+              <entry>Minneapolis, Minnesota / City</entry>
+              <entry>01 Jul 2026</entry>
+            </row>
+            <row>
+              <entry>US-MN-HENNEPIN-BLM</entry>
+              <entry>Bloomington, Minnesota / City</entry>
+              <entry>—</entry>
+            </row>
+            <row>
+              <entry>US-VA-NORFOLK</entry>
+              <entry>Norfolk, Virginia / Independent City</entry>
+              <entry>01 Jan 2026</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+
+    <section id="economic-nexus">
+      <title>Changes to Economic Nexus Thresholds</title>
+      <p>No changes to economic nexus thresholds in this release.</p>
+    </section>
+
+    <section id="tax-rates">
+      <title>Changes to Tax Rates</title>
+      <p><b>What changed:</b> Rate additions and updates by jurisdiction and tax type are
+        summarized below.</p>
+
+      <p outputclass="jurisdiction-heading"><b>US-MN-HENNEPIN-MPLS (Minneapolis, Minnesota /
+        City — Hennepin County)</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Tax Type</dt>
+          <dd>Sales Tax</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Change Title</dt>
+          <dd>Minneapolis Local Special District Tax Addition</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Citations</dt>
+          <dd>MN Revenue Notice #26-04</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Effective From</dt>
+          <dd>2026-07-01</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Additions</dt>
+          <dd>New 0.5% local sales and use tax for the Minneapolis downtown special district.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Summary</dt>
+          <dd>A new 0.5% local sales and use tax has been enacted for the Minneapolis downtown
+            special district.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Impact</dt>
+          <dd>Total sales tax for eligible downtown transactions will increase to 9.025%.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Tax Codes</dt>
+          <dd>Addition — MN-MPLS-DT (Downtown District Surcharge)</dd>
+        </dlentry>
+      </dl>
+      <note type="attention" outputclass="action-required">
+        <b>Action Required:</b> Ensure your point-of-sale systems are configured to pass the
+        accurate address or latitude/longitude for downtown Minneapolis locations.
+      </note>
+
+      <p outputclass="jurisdiction-heading"><b>US-VA-NORFOLK (Norfolk, Virginia / Independent
+        City)</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Tax Type</dt>
+          <dd>Lodging Tax</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Change Title</dt>
+          <dd>Norfolk Nightly Lodging Fee Update</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Citations</dt>
+          <dd>Norfolk Ordinance 12-345</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Effective From</dt>
+          <dd>2026-01-01</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Updates</dt>
+          <dd>Tax base for the $3 fee changed from Per Night to Per Night Per Number of Rooms.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Summary</dt>
+          <dd>Tax base for $3 fee changed from Per Night to Per Night Per Number of Rooms.</dd>
+        </dlentry>
+      </dl>
+      <note type="attention" outputclass="action-required">
+        <b>Action Required:</b> Provide room count for stays on or after Jan 1.
+      </note>
+    </section>
+
+    <section id="taxability-rules">
+      <title>Changes to Taxability Rules</title>
+      <p><b>What changed:</b> The following jurisdiction had a change to the taxable base logic
+        underlying an existing tax type.</p>
+      <p outputclass="jurisdiction-heading"><b>Bloomington, Minnesota (City) — Hennepin County</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Tax Type</dt>
+          <dd>Admissions Tax</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Change Title</dt>
+          <dd>Mall of America Admissions Tax Adjustment</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Citations</dt>
+          <dd>Bloomington City Ord. 2026-11</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Updates</dt>
+          <dd>Minor adjustment to the taxable base for entertainment admissions within the Mall
+            of America district.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Impact</dt>
+          <dd>Admissions tax calculations for affected venues within the district will reflect
+            the revised taxable base.</dd>
+        </dlentry>
+      </dl>
+    </section>
+
+    <section id="tax-codes">
+      <title>Updated Tax Codes</title>
+      <p><b>Overview:</b> Tax code additions and deletions for this release, grouped by
+        jurisdiction.</p>
+      <p outputclass="jurisdiction-heading"><b>Minneapolis, Minnesota (City) — Hennepin County</b></p>
+      <dl outputclass="change-card">
+        <dlentry>
+          <dt>Additions</dt>
+          <dd>MN-MPLS-DT — Downtown District Surcharge</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Deletions</dt>
+          <dd>none</dd>
+        </dlentry>
+      </dl>
+    </section>
+
+    <section id="new-jurisdictions">
+      <title>New Jurisdictions or Tax Types Added</title>
+      <p>No changes.</p>
+    </section>
+
+    <section id="supporting-resources">
+      <title>Supporting Resources</title>
+      <ul>
+        <li><xref href="#" format="html" scope="external">Sales &amp; Use Tax content coverage
+          reference</xref></li>
+        <li><xref href="#" format="html" scope="external">Minneapolis downtown special district
+          help article</xref></li>
+        <li><xref href="#" format="html" scope="external">Norfolk lodging tax help article</xref></li>
+      </ul>
+    </section>
+  </refbody>
+  <related-links>
+    <link href="avatax-sut-releasenotes.dita">
+      <linktext>AvaTax Sales &amp; Use Tax Release Notes</linktext>
+    </link>
+  </related-links>
+</reference>
