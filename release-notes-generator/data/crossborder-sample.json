@@ -1,0 +1,59 @@
+{
+  "releaseVersion": "26.6.1.0",
+  "releaseMonthYear": "June 2026",
+  "generated": "2026-06-30",
+
+  "systems": [
+    { "code": "HTS A", "name": "United States", "effectiveDate": "01 Jul 2026" },
+    { "code": "CN8", "name": "European Union", "effectiveDate": "01 Jul 2026" },
+    { "code": "HS UK", "name": "United Kingdom", "effectiveDate": "15 Jun 2026" }
+  ],
+
+  "deMinimis": [
+    {
+      "jurisdiction": "United States",
+      "update": "Section 321 de minimis exemption for low-value shipments removed for all countries of origin.",
+      "effectiveFrom": "01 Jul 2026",
+      "impact": "Shipments previously exempt under the $800 de minimis threshold are now subject to duty and formal/informal entry requirements regardless of origin."
+    }
+  ],
+
+  "hsTaxonomy": [
+    {
+      "systemCode": "CN8",
+      "region": "European Union",
+      "additions": "07 (Edible vegetables); 08 (Edible fruit and nuts)",
+      "deletions": "none"
+    },
+    {
+      "systemCode": "HS UK",
+      "region": "United Kingdom",
+      "additions": "none",
+      "deletions": "97 (Works of art, collectors' pieces and antiques) — chapter retired from the UK tariff schedule"
+    }
+  ],
+
+  "customsValuation": null,
+
+  "updatedContent": [
+    {
+      "systemCode": "HTS A",
+      "region": "United States",
+      "mfnChanges": "Chapter 84 (Machinery and mechanical appliances) — updated general duty rates.",
+      "preferentialChanges": "USMCA preferential rates updated for Chapters 61–62 (apparel) covering Mexico and Canada."
+    },
+    {
+      "systemCode": "CN8",
+      "region": "European Union",
+      "mfnChanges": "none",
+      "preferentialChanges": "EU–Vietnam FTA preferential coverage expanded to Chapter 85 (electrical machinery). Full list of affected tariff lines has been condensed; see linked coverage reference for details."
+    }
+  ],
+
+  "newContent": null,
+
+  "resources": [
+    { "label": "HS taxonomy coverage reference", "url": "#" },
+    { "label": "Section 321 de minimis change help article", "url": "#" }
+  ]
+}

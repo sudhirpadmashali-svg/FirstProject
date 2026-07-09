@@ -1,0 +1,9 @@
+# Generated HTML release notes
+output/
+
+# Dependencies (none currently, but keep local installs out of git)
+node_modules/
+
+# Logs / OS cruft
+*.log
+.DS_Store

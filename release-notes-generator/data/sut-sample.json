@@ -1,0 +1,115 @@
+{
+  "releaseVersion": "26.6.1.0",
+  "releaseMonthYear": "June 2026",
+  "window": "2026-06-01 — 2026-06-30",
+  "generated": "2026-06-30",
+  "newJurisdictions": null,
+  "resources": [
+    { "label": "Sales & Use Tax content coverage reference", "url": "#" },
+    { "label": "Minneapolis downtown special district help article", "url": "#" },
+    { "label": "Norfolk lodging tax help article", "url": "#" }
+  ],
+  "tree": [
+    {
+      "code": "US",
+      "name": "United States",
+      "level": "Country",
+      "children": [
+        {
+          "code": "US-MN",
+          "name": "Minnesota",
+          "level": "State",
+          "children": [
+            {
+              "code": "US-MN-HENNEPIN",
+              "name": "Hennepin County",
+              "level": "County",
+              "children": [
+                {
+                  "code": "US-MN-HENNEPIN-MPLS",
+                  "name": "Minneapolis",
+                  "level": "City",
+                  "effectiveDate": "2026-07-01",
+                  "taxTypes": [
+                    {
+                      "name": "Sales Tax",
+                      "changes": [
+                        {
+                          "title": "Minneapolis Local Special District Tax Addition",
+                          "category": "rate",
+                          "citations": ["MN Revenue Notice #26-04"],
+                          "effectiveFrom": "2026-07-01",
+                          "rates": {
+                            "additions": ["New 0.5% local sales and use tax for the Minneapolis downtown special district"]
+                          },
+                          "summary": "A new 0.5% local sales and use tax has been enacted for the Minneapolis downtown special district.",
+                          "impact": "Total sales tax for eligible downtown transactions will increase to 9.025%.",
+                          "actionRequired": "Ensure your point-of-sale systems are configured to pass the accurate address or latitude/longitude for downtown Minneapolis locations.",
+                          "taxCodes": {
+                            "additions": ["MN-MPLS-DT (Downtown District Surcharge)"]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "code": "US-MN-HENNEPIN-BLM",
+                  "name": "Bloomington",
+                  "level": "City",
+                  "taxTypes": [
+                    {
+                      "name": "Admissions Tax",
+                      "changes": [
+                        {
+                          "title": "Mall of America Admissions Tax Adjustment",
+                          "category": "taxability",
+                          "citations": ["Bloomington City Ord. 2026-11"],
+                          "taxability": {
+                            "updations": ["Minor adjustment to the taxable base for entertainment admissions within the Mall of America district."]
+                          },
+                          "impact": "Admissions tax calculations for affected venues within the district will reflect the revised taxable base."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "US-VA",
+          "name": "Virginia",
+          "level": "State",
+          "children": [
+            {
+              "code": "US-VA-NORFOLK",
+              "name": "Norfolk (Independent City)",
+              "level": "Independent City",
+              "effectiveDate": "2026-01-01",
+              "taxTypes": [
+                {
+                  "name": "Lodging Tax",
+                  "changes": [
+                    {
+                      "title": "Norfolk Nightly Lodging Fee Update",
+                      "category": "rate",
+                      "citations": ["Norfolk Ordinance 12-345"],
+                      "effectiveFrom": "2026-01-01",
+                      "rates": {
+                        "updations": ["Tax base for the $3 fee changed from Per Night to Per Night Per Number of Rooms."]
+                      },
+                      "summary": "Tax base for $3 fee changed from Per Night to Per Night Per Number of Rooms.",
+                      "actionRequired": "Provide room count for stays on or after Jan 1."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
