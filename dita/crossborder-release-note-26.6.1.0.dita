@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="AVATAX_XB_RN_26_6_1_0" xml:lang="en-US">
+  <title>Avalara AvaTax Cross-Border Release Notes</title>
+  <titlealts>
+    <navtitle>Release Note 26.6.1.0 (June 2026)</navtitle>
+  </titlealts>
+  <shortdesc>This is a summary of system updates. It includes de minimis rules, HS taxonomy
+    changes, customs valuation approaches, and cross-border content updates.</shortdesc>
+  <prolog>
+    <author>Avalara Content Automation</author>
+    <copyright>
+      <copyryear year="2026"/>
+      <copyrholder>Avalara Inc.</copyrholder>
+    </copyright>
+    <critdates>
+      <created date="2026-06-30"/>
+      <revised modified="2026-06-30"/>
+    </critdates>
+    <metadata>
+      <!-- [INTERNAL] Document Metadata Block - automation system anchor, do not publish -->
+      <othermeta name="templateVersion" content="2.0"/>
+      <othermeta name="templateType" content="Custom - Cross-Border"/>
+      <othermeta name="product" content="AvaTax Cross-Border"/>
+      <othermeta name="productArea" content="Cross-Border"/>
+      <othermeta name="releaseVersion" content="26.6.1.0"/>
+      <othermeta name="fixVersion" content="26.6.1.0"/>
+      <othermeta name="releaseDate" content="2026-06-30"/>
+      <othermeta name="contentSyncDate" content="2026-06-30"/>
+      <othermeta name="documentationBranch" content="release-26.6"/>
+      <othermeta name="ditaMapId" content="AVATAX_XB_RN_MAP"/>
+      <othermeta name="releaseNotesRequired" content="Yes"/>
+      <othermeta name="approvalStatus" content="Approved"/>
+      <othermeta name="publicationStatus" content="Published"/>
+      <othermeta name="validationResult" content="Pass"/>
+    </metadata>
+  </prolog>
+  <refbody>
+
+    <!-- ===================== Systems Updated ===================== -->
+    <section id="systems-updated" outputclass="systems-updated">
+      <title>Systems Updated</title>
+      <p>The following content systems were refreshed in this release. Effective dates reflect
+        the latest available content synchronization.</p>
+      <table frame="all" outputclass="systems-grid">
+        <title>Systems and effective dates</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.5*"/>
+          <colspec colname="c2" colnum="2" colwidth="2.5*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.5*"/>
+          <thead>
+            <row>
+              <entry>System Code</entry>
+              <entry>System Name / Region</entry>
+              <entry>Effective Date</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>HTS A</entry>
+              <entry>United States</entry>
+              <entry>01 Jul 2026</entry>
+            </row>
+            <row>
+              <entry>CN8</entry>
+              <entry>European Union</entry>
+              <entry>01 Jul 2026</entry>
+            </row>
+            <row>
+              <entry>HS UK</entry>
+              <entry>United Kingdom</entry>
+              <entry>15 Jun 2026</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+
+    <!-- ===================== Changes to De Minimis Rules ===================== -->
+    <section id="de-minimis" outputclass="de-minimis">
+      <title>Changes to De Minimis Rules</title>
+      <div outputclass="change-block">
+        <dl outputclass="change-fields">
+          <dlentry>
+            <dt>Jurisdiction</dt>
+            <dd>United States</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Update</dt>
+            <dd>Section 321 de minimis exemption for low-value shipments removed for all
+              countries of origin.</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Effective From</dt>
+            <dd>01 Jul 2026</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Impact</dt>
+            <dd>Shipments previously exempt under the $800 de minimis threshold are now subject
+              to duty and formal/informal entry requirements regardless of origin.</dd>
+          </dlentry>
+        </dl>
+      </div>
+      <p>No other de minimis rule changes in this release.</p>
+    </section>
+
+    <!-- ===================== Changes to HS Taxonomy ===================== -->
+    <section id="hs-taxonomy" outputclass="hs-taxonomy">
+      <title>Changes to HS Taxonomy</title>
+      <div outputclass="system-block">
+        <p outputclass="subhead"><b>CN8 (European Union)</b></p>
+        <dl outputclass="taxonomy-fields">
+          <dlentry>
+            <dt>Additions</dt>
+            <dd>07 (Edible vegetables); 08 (Edible fruit and nuts)</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Deletions</dt>
+            <dd>none</dd>
+          </dlentry>
+        </dl>
+      </div>
+      <div outputclass="system-block">
+        <p outputclass="subhead"><b>HS UK (United Kingdom)</b></p>
+        <dl outputclass="taxonomy-fields">
+          <dlentry>
+            <dt>Additions</dt>
+            <dd>none</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Deletions</dt>
+            <dd>97 (Works of art, collectors' pieces and antiques) &#8212; chapter retired from
+              the UK tariff schedule</dd>
+          </dlentry>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== Changes to Customs Valuation Approaches ===================== -->
+    <section id="customs-valuation" outputclass="customs-valuation">
+      <title>Changes to Customs Valuation Approaches</title>
+      <p>No changes.</p>
+    </section>
+
+    <!-- ===================== Updated Cross-Border Content ===================== -->
+    <section id="updated-content" outputclass="updated-content">
+      <title>Updated Cross-Border Content</title>
+      <div outputclass="system-block">
+        <p outputclass="subhead"><b>HTS A (United States)</b></p>
+        <dl outputclass="content-fields">
+          <dlentry>
+            <dt>MFN changes</dt>
+            <dd>Chapter 84 (Machinery and mechanical appliances) &#8212; updated general duty
+              rates.</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Preferential changes</dt>
+            <dd>USMCA preferential rates updated for Chapters 61&#8211;62 (apparel) covering
+              Mexico and Canada.</dd>
+          </dlentry>
+        </dl>
+      </div>
+      <div outputclass="system-block">
+        <p outputclass="subhead"><b>CN8 (European Union)</b></p>
+        <dl outputclass="content-fields">
+          <dlentry>
+            <dt>MFN changes</dt>
+            <dd>none</dd>
+          </dlentry>
+          <dlentry>
+            <dt>Preferential changes</dt>
+            <dd>EU&#8211;Vietnam FTA preferential coverage expanded to Chapter 85 (electrical
+              machinery). Full list of affected tariff lines has been condensed; see linked
+              coverage reference for details.</dd>
+          </dlentry>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== New Cross-Border Content Added ===================== -->
+    <section id="new-content" outputclass="new-content">
+      <title>New Cross-Border Content Added</title>
+      <p>No changes.</p>
+    </section>
+
+    <!-- ===================== Supporting Resources ===================== -->
+    <section id="supporting-resources" outputclass="supporting-resources">
+      <title>Supporting Resources</title>
+      <ul outputclass="bullet-list">
+        <li><xref href="#" format="html" scope="external">HS taxonomy coverage
+          reference</xref></li>
+        <li><xref href="#" format="html" scope="external">Section 321 de minimis change help
+          article</xref></li>
+      </ul>
+    </section>
+
+    <section outputclass="disclaimer">
+      <p>Avalara regularly updates Knowledge Center content and this document may be out of
+        date. Please check back frequently for updates. &#169; Avalara Inc. 2026</p>
+    </section>
+  </refbody>
+  <related-links>
+    <link href="avatax-crossborder-rn.ditamap" format="ditamap" scope="local">
+      <linktext>AvaTax Cross-Border Release Notes</linktext>
+    </link>
+  </related-links>
+</reference>

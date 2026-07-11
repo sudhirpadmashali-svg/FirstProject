@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Local DITA Reference subset DTD
+  ================================
+  This is NOT the full OASIS DITA 1.3 grammar. It is a self-contained subset
+  that declares exactly the elements and attributes used by the AvaTax release
+  note reference topics in this directory, so they can be validated standalone
+  with a plain validating XML parser (e.g. xmllint in validating mode) without
+  needing the official DITA DTD set or an XML catalog.
+
+  In a production DITA toolchain, map the public identifier
+  "-//OASIS//DTD DITA Reference//EN" to the official OASIS grammar via an XML
+  catalog; that grammar is a superset of what is declared here.
+-->
+
+<!-- Common (universal) attributes shared by most elements -->
+<!ENTITY % univ-atts
+  "id           ID     #IMPLIED
+   xml:lang     CDATA  #IMPLIED
+   outputclass  CDATA  #IMPLIED
+   audience     CDATA  #IMPLIED
+   props        CDATA  #IMPLIED
+   class        CDATA  #IMPLIED" >
+
+<!-- ===================== Topic skeleton ===================== -->
+<!ELEMENT reference (title, titlealts?, shortdesc?, prolog?, refbody?, related-links?) >
+<!ATTLIST reference %univ-atts; >
+
+<!ELEMENT title (#PCDATA | b)* >
+<!ATTLIST title %univ-atts; >
+
+<!ELEMENT titlealts (navtitle?) >
+<!ATTLIST titlealts %univ-atts; >
+
+<!ELEMENT navtitle (#PCDATA) >
+<!ATTLIST navtitle %univ-atts; >
+
+<!ELEMENT shortdesc (#PCDATA | b)* >
+<!ATTLIST shortdesc %univ-atts; >
+
+<!-- ===================== Prolog / metadata ===================== -->
+<!ELEMENT prolog (author?, copyright?, critdates?, metadata?) >
+<!ATTLIST prolog %univ-atts; >
+
+<!ELEMENT author (#PCDATA) >
+<!ATTLIST author %univ-atts; >
+
+<!ELEMENT copyright (copyryear, copyrholder) >
+<!ATTLIST copyright %univ-atts; >
+
+<!ELEMENT copyryear EMPTY >
+<!ATTLIST copyryear year CDATA #REQUIRED >
+<!ATTLIST copyryear %univ-atts; >
+
+<!ELEMENT copyrholder (#PCDATA) >
+<!ATTLIST copyrholder %univ-atts; >
+
+<!ELEMENT critdates (created?, revised?) >
+<!ATTLIST critdates %univ-atts; >
+
+<!ELEMENT created EMPTY >
+<!ATTLIST created date CDATA #IMPLIED >
+<!ATTLIST created %univ-atts; >
+
+<!ELEMENT revised EMPTY >
+<!ATTLIST revised modified CDATA #IMPLIED >
+<!ATTLIST revised %univ-atts; >
+
+<!ELEMENT metadata (othermeta+) >
+<!ATTLIST metadata %univ-atts; >
+
+<!ELEMENT othermeta EMPTY >
+<!ATTLIST othermeta name CDATA #IMPLIED content CDATA #IMPLIED >
+<!ATTLIST othermeta %univ-atts; >
+
+<!-- ===================== Body ===================== -->
+<!ELEMENT refbody (section)* >
+<!ATTLIST refbody %univ-atts; >
+
+<!ELEMENT section (title?, (p | div | ul | table | note | dl)*) >
+<!ATTLIST section %univ-atts; >
+
+<!-- <div> carries the nested jurisdiction hierarchy (section cannot nest) -->
+<!ELEMENT div (p | div | dl | note | table | data | ul)* >
+<!ATTLIST div %univ-atts; >
+
+<!ELEMENT p (#PCDATA | b | xref)* >
+<!ATTLIST p %univ-atts; >
+
+<!ELEMENT b (#PCDATA)* >
+<!ATTLIST b %univ-atts; >
+
+<!ELEMENT note (#PCDATA | b)* >
+<!ATTLIST note type CDATA #IMPLIED >
+<!ATTLIST note %univ-atts; >
+
+<!ELEMENT data EMPTY >
+<!ATTLIST data name CDATA #IMPLIED value CDATA #IMPLIED >
+<!ATTLIST data %univ-atts; >
+
+<!-- ===================== Definition lists (field rows) ===================== -->
+<!ELEMENT dl (dlentry+) >
+<!ATTLIST dl %univ-atts; >
+
+<!ELEMENT dlentry (dt, dd) >
+<!ATTLIST dlentry %univ-atts; >
+
+<!ELEMENT dt (#PCDATA | b)* >
+<!ATTLIST dt %univ-atts; >
+
+<!ELEMENT dd (#PCDATA | b | xref)* >
+<!ATTLIST dd %univ-atts; >
+
+<!-- ===================== Lists and links ===================== -->
+<!ELEMENT ul (li+) >
+<!ATTLIST ul %univ-atts; >
+
+<!ELEMENT li (#PCDATA | b | xref)* >
+<!ATTLIST li %univ-atts; >
+
+<!ELEMENT xref (#PCDATA | b)* >
+<!ATTLIST xref href CDATA #IMPLIED format CDATA #IMPLIED scope CDATA #IMPLIED >
+<!ATTLIST xref %univ-atts; >
+
+<!ELEMENT related-links (link+) >
+<!ATTLIST related-links %univ-atts; >
+
+<!ELEMENT link (linktext?) >
+<!ATTLIST link href CDATA #IMPLIED format CDATA #IMPLIED scope CDATA #IMPLIED >
+<!ATTLIST link %univ-atts; >
+
+<!ELEMENT linktext (#PCDATA | b)* >
+<!ATTLIST linktext %univ-atts; >
+
+<!-- ===================== CALS table (bulk update grid) ===================== -->
+<!ELEMENT table (title?, tgroup) >
+<!ATTLIST table frame CDATA #IMPLIED >
+<!ATTLIST table %univ-atts; >
+
+<!ELEMENT tgroup (colspec*, thead?, tbody) >
+<!ATTLIST tgroup cols CDATA #REQUIRED >
+<!ATTLIST tgroup %univ-atts; >
+
+<!ELEMENT colspec EMPTY >
+<!ATTLIST colspec
+  colname  CDATA #IMPLIED
+  colnum   CDATA #IMPLIED
+  colwidth CDATA #IMPLIED >
+
+<!ELEMENT thead (row+) >
+<!ATTLIST thead %univ-atts; >
+
+<!ELEMENT tbody (row+) >
+<!ATTLIST tbody %univ-atts; >
+
+<!ELEMENT row (entry+) >
+<!ATTLIST row %univ-atts; >
+
+<!ELEMENT entry (#PCDATA | b | xref)* >
+<!ATTLIST entry %univ-atts; >

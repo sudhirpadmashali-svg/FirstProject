@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="AVATAX_VAT_RN_MAP" xml:lang="en-US">
+  <title>AvaTax VAT International Release Notes</title>
+  <topicmeta>
+    <navtitle>AvaTax VAT International Release Notes</navtitle>
+    <othermeta name="product" content="AvaTax VAT International"/>
+    <othermeta name="productArea" content="VAT International"/>
+    <othermeta name="documentationBranch" content="release-26.6"/>
+  </topicmeta>
+  <topicref href="vat-international-release-note-26.6.1.0.dita" type="reference" format="dita">
+    <topicmeta>
+      <navtitle>Release Note 26.6.1.0 (June 2026)</navtitle>
+    </topicmeta>
+  </topicref>
+</map>
