@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="AVATAX_VAT_RN_26_6_1_0" xml:lang="en-US">
+  <title>Avalara AvaTax VAT International Release Notes</title>
+  <titlealts>
+    <navtitle>Release Note 26.6.1.0 (June 2026)</navtitle>
+  </titlealts>
+  <shortdesc>This is a summary of system updates. It includes VAT registration threshold
+    changes, VAT rate changes, taxability and exemption rule changes, tax code changes, and
+    jurisdiction content updates.</shortdesc>
+  <prolog>
+    <author>Avalara Content Automation</author>
+    <copyright>
+      <copyryear year="2026"/>
+      <copyrholder>Avalara Inc.</copyrholder>
+    </copyright>
+    <critdates>
+      <created date="2026-06-30"/>
+      <revised modified="2026-06-30"/>
+    </critdates>
+    <metadata>
+      <!-- [INTERNAL] Document Metadata Block - automation system anchor, do not publish -->
+      <othermeta name="templateVersion" content="4.0"/>
+      <othermeta name="templateType" content="Custom - VAT International"/>
+      <othermeta name="product" content="AvaTax VAT International"/>
+      <othermeta name="productArea" content="VAT International"/>
+      <othermeta name="contentType" content="International VAT"/>
+      <othermeta name="releaseVersion" content="26.6.1.0"/>
+      <othermeta name="fixVersion" content="26.6.1.0"/>
+      <othermeta name="releaseDate" content="2026-06-30"/>
+      <othermeta name="releaseWindow" content="2026-05-01/2026-05-31"/>
+      <othermeta name="contentSyncDate" content="2026-06-30"/>
+      <othermeta name="documentationBranch" content="release-26.6"/>
+      <othermeta name="ditaMapId" content="AVATAX_VAT_RN_MAP"/>
+      <othermeta name="releaseNotesRequired" content="Yes"/>
+      <othermeta name="approvalStatus" content="Approved"/>
+      <othermeta name="publicationStatus" content="Published"/>
+      <othermeta name="validationResult" content="Pass"/>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section id="detailed-changes" outputclass="detailed-changes-by-jurisdiction">
+      <title>Detailed Changes by Jurisdiction</title>
+      <p outputclass="overview"><b>Overview:</b> Registration threshold, rate,
+        taxability/exemption rule, and tax code changes for this release are described below,
+        organized by jurisdiction and tax type. This is the sole primary section &#8212;
+        jurisdiction and effective date are captured within each entry rather than in a separate
+        summary table.</p>
+
+      <!-- ============ COUNTRY / BLOC: European Union (Pattern A - isolated change) ============ -->
+      <div outputclass="country-card">
+        <p outputclass="country-header"><b>European Union</b></p>
+        <div outputclass="country-body">
+          <p outputclass="taxtype-label">Value Added Tax (VAT)</p>
+          <div outputclass="change-card">
+            <p outputclass="change-title"><b>Domestic VAT Out-of-Scope Expansion</b></p>
+            <dl outputclass="change-fields">
+              <dlentry>
+                <dt>Citation</dt>
+                <dd>EU Commission Directive 2026/X42</dd>
+              </dlentry>
+              <dlentry>
+                <dt>Effective Date</dt>
+                <dd>2026-05-21</dd>
+              </dlentry>
+              <dlentry>
+                <dt>Description</dt>
+                <dd>The Domestic VAT Out-of-Scope provision was expanded to include service and
+                  digital transaction types, which were previously limited primarily to product
+                  transactions.</dd>
+              </dlentry>
+              <dlentry>
+                <dt>Impact</dt>
+                <dd>Out-of-Scope treatment now extends to service and digital transaction types
+                  in addition to product transactions.</dd>
+              </dlentry>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ BLOC: EU Member States (Pattern B - bulk update grid) ============ -->
+      <div outputclass="country-card">
+        <p outputclass="country-header"><b>European Union &#8212; Member States</b></p>
+        <div outputclass="country-body">
+          <div outputclass="bulk-card">
+            <p outputclass="bulk-badge">Bulk Update</p>
+            <p outputclass="taxtype-label">Value Added Tax (VAT)</p>
+            <p outputclass="change-title"><b>OSS Distance-Selling Threshold Alignment</b></p>
+            <dl outputclass="change-fields">
+              <dlentry>
+                <dt>Citation</dt>
+                <dd>EU Council Directive 2026/778</dd>
+              </dlentry>
+              <dlentry>
+                <dt>Effective Date</dt>
+                <dd>2026-05-21</dd>
+              </dlentry>
+              <dlentry>
+                <dt>Description</dt>
+                <dd>Several member states aligned their domestic distance-selling registration
+                  thresholds to the harmonized EU-wide OSS threshold as part of the same
+                  directive. Affected member states are listed below.</dd>
+              </dlentry>
+            </dl>
+            <table frame="all" outputclass="bulk-grid">
+              <title>Affected jurisdictions</title>
+              <tgroup cols="4">
+                <colspec colname="c1" colnum="1" colwidth="1.5*"/>
+                <colspec colname="c2" colnum="2" colwidth="2*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <colspec colname="c4" colnum="4" colwidth="2.5*"/>
+                <thead>
+                  <row>
+                    <entry>Jurisdiction Code</entry>
+                    <entry>Jurisdiction Name / Level</entry>
+                    <entry>Effective Date</entry>
+                    <entry>Description of Change</entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry>FR</entry>
+                    <entry>France / Member State</entry>
+                    <entry>21 May 2026</entry>
+                    <entry>Domestic threshold retired in favor of the &#8364;10,000 EU-wide OSS
+                      threshold</entry>
+                  </row>
+                  <row>
+                    <entry>IT</entry>
+                    <entry>Italy / Member State</entry>
+                    <entry>21 May 2026</entry>
+                    <entry>Domestic threshold retired in favor of the &#8364;10,000 EU-wide OSS
+                      threshold</entry>
+                  </row>
+                  <row>
+                    <entry>ES</entry>
+                    <entry>Spain / Member State</entry>
+                    <entry>21 May 2026</entry>
+                    <entry>Domestic threshold retired in favor of the &#8364;10,000 EU-wide OSS
+                      threshold</entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="supporting-resources" outputclass="supporting-resources">
+      <title>Supporting Resources</title>
+      <ul outputclass="bullet-list">
+        <li><xref href="#" format="html" scope="external">EU VAT scope &amp; Out-of-Scope
+          treatment reference</xref></li>
+        <li><xref href="#" format="html" scope="external">OSS/IOSS scheme help article</xref></li>
+      </ul>
+    </section>
+
+    <section outputclass="disclaimer">
+      <p>Avalara regularly updates Knowledge Center content and this document may be out of
+        date. Please check back frequently for updates. &#169; Avalara Inc. 2026</p>
+    </section>
+  </refbody>
+  <related-links>
+    <link href="avatax-vat-rn.ditamap" format="ditamap" scope="local">
+      <linktext>AvaTax VAT International Release Notes</linktext>
+    </link>
+  </related-links>
+</reference>

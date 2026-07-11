@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="AVATAX_SUT_RN_26_6_1_0" xml:lang="en-US">
+  <title>Avalara AvaTax Sales &amp; Use Tax Release Notes</title>
+  <titlealts>
+    <navtitle>Release Note 26.6.1.0 (June 2026)</navtitle>
+  </titlealts>
+  <shortdesc>This is a summary of system updates. It includes economic nexus threshold
+    changes, tax rate changes, taxability rule changes, tax code changes, and jurisdiction
+    content updates.</shortdesc>
+  <prolog>
+    <author>Avalara Content Automation</author>
+    <copyright>
+      <copyryear year="2026"/>
+      <copyrholder>Avalara Inc.</copyrholder>
+    </copyright>
+    <critdates>
+      <created date="2026-06-30"/>
+      <revised modified="2026-06-30"/>
+    </critdates>
+    <metadata>
+      <!-- [INTERNAL] Document Metadata Block - automation system anchor, do not publish -->
+      <othermeta name="templateVersion" content="4.0"/>
+      <othermeta name="templateType" content="Custom - SUT (US Sales &amp; Use Tax)"/>
+      <othermeta name="product" content="AvaTax"/>
+      <othermeta name="productArea" content="Sales &amp; Use Tax"/>
+      <othermeta name="releaseVersion" content="26.6.1.0"/>
+      <othermeta name="fixVersion" content="26.6.1.0"/>
+      <othermeta name="releaseDate" content="2026-06-30"/>
+      <othermeta name="releaseWindow" content="2026-06-01/2026-06-30"/>
+      <othermeta name="contentSyncDate" content="2026-06-30"/>
+      <othermeta name="documentationBranch" content="release-26.6"/>
+      <othermeta name="ditaMapId" content="AVATAX_SUT_RN_MAP"/>
+      <othermeta name="releaseNotesRequired" content="Yes"/>
+      <othermeta name="approvalStatus" content="Approved"/>
+      <othermeta name="publicationStatus" content="Published"/>
+      <othermeta name="validationResult" content="Pass"/>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section id="detailed-changes" outputclass="detailed-changes-by-jurisdiction">
+      <title>Detailed Changes by Jurisdiction</title>
+      <p outputclass="overview"><b>Overview:</b> Nexus/threshold, rate, taxability rule, and
+        tax code changes for this release are described below, organized by jurisdiction and
+        tax type. This is the sole primary section &#8212; jurisdiction and effective date are
+        captured within each entry rather than in a separate summary table.</p>
+
+      <!-- ============ COUNTRY: United States ============ -->
+      <div outputclass="country">
+        <p outputclass="country-name"><b>United States</b></p>
+
+        <!-- == STATE: Minnesota == -->
+        <div outputclass="state">
+          <p outputclass="state-name"><b>Minnesota</b></p>
+
+          <!-- County: Hennepin -->
+          <div outputclass="county">
+            <p outputclass="county-name"><b>Hennepin County</b></p>
+
+            <!-- City: Minneapolis (Pattern A - isolated change) -->
+            <div outputclass="city">
+              <p outputclass="city-name">Minneapolis</p>
+              <div outputclass="taxtype-card">
+                <p outputclass="taxtype-label">Sales Tax</p>
+                <div outputclass="change-card">
+                  <p outputclass="change-title"><b>Minneapolis Local Special District Tax
+                    Addition</b></p>
+                  <dl outputclass="change-fields">
+                    <dlentry>
+                      <dt>Citation</dt>
+                      <dd>MN Revenue Notice #26-04</dd>
+                    </dlentry>
+                    <dlentry>
+                      <dt>Effective</dt>
+                      <dd>2026-07-01</dd>
+                    </dlentry>
+                    <dlentry>
+                      <dt>Description</dt>
+                      <dd>A new local sales and use tax has been enacted for the Minneapolis
+                        downtown special district.</dd>
+                    </dlentry>
+                    <dlentry>
+                      <dt>Impact</dt>
+                      <dd>Total sales tax for eligible downtown transactions will increase to
+                        9.025%.</dd>
+                    </dlentry>
+                    <dlentry outputclass="tax-code-added">
+                      <dt>New Tax Code(s) Added</dt>
+                      <dd>MN-MPLS-DT (Downtown District Surcharge)</dd>
+                    </dlentry>
+                    <dlentry outputclass="tax-code-removed">
+                      <dt>Tax Code(s) Removed</dt>
+                      <dd>none</dd>
+                    </dlentry>
+                  </dl>
+                  <note type="attention" outputclass="action-required">
+                    <b>Action Required:</b> Ensure your point-of-sale systems are configured to
+                    pass the accurate address or latitude/longitude for downtown Minneapolis
+                    locations.
+                  </note>
+                  <data name="changeTag" value="Addition" audience="internal"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- City: Bloomington (Pattern A - isolated change) -->
+            <div outputclass="city">
+              <p outputclass="city-name">Bloomington</p>
+              <div outputclass="taxtype-card">
+                <p outputclass="taxtype-label">Admissions Tax</p>
+                <div outputclass="change-card">
+                  <p outputclass="change-title"><b>Mall of America Admissions Tax
+                    Adjustment</b></p>
+                  <dl outputclass="change-fields">
+                    <dlentry>
+                      <dt>Citation</dt>
+                      <dd>Bloomington City Ord. 2026-11</dd>
+                    </dlentry>
+                    <dlentry>
+                      <dt>Description</dt>
+                      <dd>A minor adjustment was made to the taxable base for entertainment
+                        admissions within the Mall of America district.</dd>
+                    </dlentry>
+                    <dlentry>
+                      <dt>Impact</dt>
+                      <dd>Admissions tax calculations for affected venues within the district
+                        will reflect the revised taxable base.</dd>
+                    </dlentry>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- == STATE: Virginia == -->
+        <div outputclass="state">
+          <p outputclass="state-name"><b>Virginia</b></p>
+
+          <!-- County/Independent City: Norfolk (Pattern A - isolated change) -->
+          <div outputclass="county">
+            <p outputclass="county-name">Norfolk (Independent City)</p>
+            <div outputclass="taxtype-card">
+              <p outputclass="taxtype-label">Lodging Tax</p>
+              <div outputclass="change-card">
+                <p outputclass="change-title"><b>Norfolk Nightly Lodging Fee Update</b></p>
+                <dl outputclass="change-fields">
+                  <dlentry>
+                    <dt>Citation</dt>
+                    <dd>Norfolk Ordinance 12-345</dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>Effective</dt>
+                    <dd>2026-01-01</dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>Description</dt>
+                    <dd>The tax base for the $3 nightly lodging fee changed from a flat
+                      per-night charge to a per-night, per-room charge.</dd>
+                  </dlentry>
+                </dl>
+                <note type="attention" outputclass="action-required">
+                  <b>Action Required:</b> Provide room count for stays on or after Jan 1.
+                </note>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- == STATE: Texas (Pattern B - bulk update grid) == -->
+        <div outputclass="state">
+          <p outputclass="state-name"><b>Texas</b></p>
+          <div outputclass="taxtype-card">
+            <div outputclass="bulk-card">
+              <p outputclass="bulk-badge">Bulk Update</p>
+              <p outputclass="taxtype-label">Sales Tax</p>
+              <p outputclass="change-title"><b>Statewide Local Option Tax Rate
+                Adjustment</b></p>
+              <dl outputclass="change-fields">
+                <dlentry>
+                  <dt>Citation</dt>
+                  <dd>TX Comptroller Rule 3.334, Rev. 2026-06</dd>
+                </dlentry>
+                <dlentry>
+                  <dt>Effective</dt>
+                  <dd>2026-07-01</dd>
+                </dlentry>
+                <dlentry>
+                  <dt>Description</dt>
+                  <dd>Several Texas municipalities adjusted their local option sales tax rate as
+                    part of the annual comptroller update cycle. Affected jurisdictions and
+                    their new rates are listed below.</dd>
+                </dlentry>
+              </dl>
+              <table frame="all" outputclass="bulk-grid">
+                <title>Affected jurisdictions</title>
+                <tgroup cols="4">
+                  <colspec colname="c1" colnum="1" colwidth="1.5*"/>
+                  <colspec colname="c2" colnum="2" colwidth="2*"/>
+                  <colspec colname="c3" colnum="3" colwidth="1*"/>
+                  <colspec colname="c4" colnum="4" colwidth="2.5*"/>
+                  <thead>
+                    <row>
+                      <entry>Jurisdiction Code</entry>
+                      <entry>Jurisdiction Name / Level</entry>
+                      <entry>Effective Date</entry>
+                      <entry>Description of Change</entry>
+                    </row>
+                  </thead>
+                  <tbody>
+                    <row>
+                      <entry>US-TX-ARLINGTON</entry>
+                      <entry>Arlington, Texas / City</entry>
+                      <entry>01 Jul 2026</entry>
+                      <entry>Local rate increased from 2.00% to 2.25%</entry>
+                    </row>
+                    <row>
+                      <entry>US-TX-PLANO</entry>
+                      <entry>Plano, Texas / City</entry>
+                      <entry>01 Jul 2026</entry>
+                      <entry>Local rate increased from 1.50% to 1.75%</entry>
+                    </row>
+                    <row>
+                      <entry>US-TX-IRVING</entry>
+                      <entry>Irving, Texas / City</entry>
+                      <entry>01 Jul 2026</entry>
+                      <entry>Local rate increased from 2.00% to 2.25%</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="supporting-resources" outputclass="supporting-resources">
+      <title>Supporting Resources</title>
+      <ul outputclass="bullet-list">
+        <li><xref href="#" format="html" scope="external">Sales &amp; Use Tax content coverage
+          reference</xref></li>
+        <li><xref href="#" format="html" scope="external">Minneapolis downtown special district
+          help article</xref></li>
+        <li><xref href="#" format="html" scope="external">Norfolk lodging tax help
+          article</xref></li>
+        <li><xref href="#" format="html" scope="external">Texas local option tax rate
+          schedule</xref></li>
+      </ul>
+    </section>
+
+    <section outputclass="disclaimer">
+      <p>Avalara regularly updates Knowledge Center content and this document may be out of
+        date. Please check back frequently for updates. &#169; Avalara Inc. 2026</p>
+    </section>
+  </refbody>
+  <related-links>
+    <link href="avatax-sut-rn.ditamap" format="ditamap" scope="local">
+      <linktext>AvaTax Sales &amp; Use Tax Release Notes</linktext>
+    </link>
+  </related-links>
+</reference>
