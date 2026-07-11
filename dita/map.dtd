@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Local DITA Map subset DTD
+  =========================
+  This is NOT the full OASIS DITA 1.3 map grammar. It is a self-contained subset
+  declaring exactly the elements and attributes used by the AvaTax release note
+  ditamaps in this directory, so they can be validated standalone with a plain
+  validating XML parser (e.g. xmllint in validating mode) without the official
+  DITA DTD set.
+
+  In a production DITA toolchain, map the public identifier
+  "-//OASIS//DTD DITA Map//EN" to the official OASIS grammar via an XML catalog;
+  that grammar is a superset of what is declared here.
+-->
+
+<!ENTITY % univ-atts
+  "id        ID     #IMPLIED
+   xml:lang  CDATA  #IMPLIED
+   class     CDATA  #IMPLIED" >
+
+<!ELEMENT map (title?, topicmeta?, topicref*) >
+<!ATTLIST map %univ-atts; >
+
+<!ELEMENT title (#PCDATA) >
+<!ATTLIST title %univ-atts; >
+
+<!ELEMENT topicmeta (navtitle?, othermeta*) >
+<!ATTLIST topicmeta %univ-atts; >
+
+<!ELEMENT navtitle (#PCDATA) >
+<!ATTLIST navtitle %univ-atts; >
+
+<!ELEMENT othermeta EMPTY >
+<!ATTLIST othermeta name CDATA #IMPLIED content CDATA #IMPLIED >
+
+<!ELEMENT topicref (topicmeta?) >
+<!ATTLIST topicref
+  href   CDATA #IMPLIED
+  type   CDATA #IMPLIED
+  format CDATA #IMPLIED
+  scope  CDATA #IMPLIED >
+<!ATTLIST topicref %univ-atts; >

@@ -11,9 +11,12 @@ the "for Automation" Word templates (Template Version 4.0).
 | `vat-international-release-note-26.6.1.0.dita` | VAT International release note (`reference` topic) |
 | `avatax-sut-rn.ditamap` | Map for the SUT topic (`DITA Map ID: AVATAX_SUT_RN_MAP`) |
 | `avatax-vat-rn.ditamap` | Map for the VAT topic (`DITA Map ID: AVATAX_VAT_RN_MAP`) |
+| `reference.dtd` | Local DTD subset for the `reference` topics |
+| `map.dtd` | Local DTD subset for the ditamaps |
 
-Each topic uses the OASIS DITA 1.3 `reference` DTD; the maps use the `map` DTD.
-All files are well-formed XML.
+Each topic declares the OASIS DITA 1.3 `reference` public identifier; the maps
+declare the `map` public identifier. All files are well-formed XML **and** pass
+DTD validation against the bundled local DTDs.
 
 ## How the template maps to DITA
 
@@ -31,13 +34,27 @@ All files are well-formed XML.
 | Supporting Resources links | `<section>` &rarr; `<ul>` of `<xref scope="external">` |
 | Parent topic | `<related-links>` &rarr; `<link>` to the map |
 
+## DTDs
+
+`reference.dtd` and `map.dtd` are **local subset DTDs** — not the full OASIS
+DITA 1.3 grammar. They declare exactly the elements and attributes used by the
+documents in this directory so the files can be validated standalone, without
+downloading the official DITA DTD set or configuring an XML catalog. The
+`SYSTEM` identifier in each document's `DOCTYPE` (`"reference.dtd"` /
+`"map.dtd"`) resolves to these local files.
+
+In a production DITA toolchain, map the OASIS public identifiers
+(`-//OASIS//DTD DITA Reference//EN`, `-//OASIS//DTD DITA Map//EN`) to the
+official grammar via an XML catalog; that grammar is a superset of what the
+local subset declares, so these documents remain valid against it.
+
 ## Validation
 
-Well-formedness was checked with an XML parser. For full DTD/schema validation
-run against the OASIS DITA 1.3 DTDs, e.g.:
+All four documents pass DTD validation against the bundled local DTDs:
 
 ```
 xmllint --noout --valid dita/sut-release-note-26.6.1.0.dita
+xmllint --noout --valid dita/vat-international-release-note-26.6.1.0.dita
+xmllint --noout --valid dita/avatax-sut-rn.ditamap
+xmllint --noout --valid dita/avatax-vat-rn.ditamap
 ```
-
-(Requires the DITA DTDs to be resolvable locally or via an XML catalog.)
